@@ -9,6 +9,7 @@
     --hover-color: #2196F3;
     --border-color: #ECECEC;
     --cards-border: #EEEEEE;
+    --links-color: #AFB1B8;
 }
 
 
@@ -28,26 +29,29 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
-
 .navigation-links {
     padding-top: 32px;
     padding-bottom: 32px;
     text-decoration: none;
     color: inherit;
 }
-
 .contacts-links {
+    display: flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
     text-decoration: none;
     color: var(--secondary-text-color);
 }
-
+.contacts-text {
+    margin: 0;
+    margin-left: 10px;
+}
 .header-navigation,
 .header-contacts {
     display: flex;
+    align-items: center;
 }
-
 .header-navigation :hover,
 .header-navigation :focus,
 .header-contacts :hover,
@@ -73,24 +77,21 @@ body {
     text-decoration: none;
     color: inherit;
 }
-
 .logo .logo-colorize {
     color: var(--hover-color);
 }
-
 .header-navigation .current {
     color: var(--hover-color);
 }
-
 .head-group {
     height: 80px;
     display: flex;
     align-items: center;
 }
-
 .nav-panel {
     margin-right: auto;
 }
+
 
 
 /* ^ПІДВАЛ (ЗАГАЛЬНИЙ) */
@@ -112,12 +113,10 @@ body {
     letter-spacing: 0.03em;
     color: var(--third-text-color);
 }
-
 .footer-contacts :hover,
 .footer-contacts :focus {
     color: var(--hover-color);
 }
-
 .footer-contacts a {
     text-decoration: none;
     color: #FFFFFF96;
@@ -125,7 +124,41 @@ body {
 .footer-contacts > .item {
     margin-top: 9px;
 }
-
+.footer-icons {
+    display: flex;
+}
+.footer-icons > .item :hover,
+.footer-icons > .item :focus {
+    background-color: var(--hover-color);
+}
+.footer-icons > .item:not(:last-child) {
+    margin-right: 10px;
+}
+.footer-links {
+    display: block;
+    width: 44px;
+    height: 44px;
+    padding: 12px 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--third-text-color);
+}
+.foot-flex {
+    display: flex;
+}
+.contacts-block {
+    margin-right: 70px;
+}
+.appeal {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: var(--third-text-color);
+}
 
 
 /* &СПІЛЬНІ ЕЛЕМЕНТИ */
@@ -178,6 +211,10 @@ img {
     max-width: 100%;
     height: auto;
 }
+/* іконки зі зміною кольору */
+.icon {
+    fill: currentColor;
+}
 
 
 /* ?СТОРІНКА "СТУДІЯ" */
@@ -188,7 +225,6 @@ img {
     text-align: center;
     background-color: var(--second-color);
 }
-
 .main-header {
     width: 696px;
     margin: 0;
@@ -201,7 +237,6 @@ img {
     letter-spacing: 0.06em;
     color: var(--third-text-color);
 }
-
 .main-button {
     width: 216px;
     height: 50px;
@@ -229,7 +264,6 @@ img {
     line-height: 1.14;
     letter-spacing: 0.03em;
 }
-
 .features-list-text {
     width: 270px;
     height: 72px;
@@ -240,7 +274,6 @@ img {
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
 }
-
 .qualities {
     display: flex;
     justify-content: center;
@@ -248,6 +281,15 @@ img {
 .qualities > .item:not(:last-child) {
     margin-right: 30px;
 }
+.qualities-icon {
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    padding: 25px 100px;
+    border-radius: 4px;
+    background-color: var(--third-color);
+}
+
 
 
 
@@ -255,7 +297,6 @@ img {
 .special-section {
     padding-top: 0;
 }
-
 .activities {
     display: flex;
     justify-content: center;
@@ -269,7 +310,6 @@ img {
 .third-block {
     background-color: var(--third-color);
 }
-
 .team {
     display: flex;
     justify-content: center;
@@ -277,7 +317,6 @@ img {
 .team > .item:not(:last-child) {
     margin-right: 30px;
 }
-
 .name {
     margin: 0;
     margin-bottom: 10px;
@@ -287,15 +326,14 @@ img {
     line-height: 1.18;
     letter-spacing: 0.03em;
 }
-
 .position {
     margin: 0;
+    margin-bottom: 16px;
 
     font-size: 16px;
     line-height: 1.18;
     color: var(--secondary-text-color);
 }
-
 .team-info {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -303,13 +341,56 @@ img {
 
     background-color: var(--third-text-color);
 }
-
 .team > .item {
     border-radius: 0px 0px 4px 4px;
     overflow: hidden;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+.team-icons {
+    display: flex;
+    justify-content: center;
+}
+.team-icons > .item :hover,
+.team-icons > .item :focus {
+    color: var(--third-text-color);
+    background-color: var(--hover-color);
+}
+.team-icons > .item:not(:last-child) {
+    margin-right: 10px;
+}
+.team-links {
+    display: block;
+    width: 44px;
+    height: 44px;
+    padding: 12px 12px;
+    border-radius: 50%;
 
+    color: var(--links-color);
+}
+
+
+
+/* ^БЛОК-4 */
+.clients {
+    display: flex;
+}
+.clients > .item :hover,
+.clients > .item :focus {
+    color: var(--hover-color);
+    border-color: var(--hover-color);
+}
+.clients > .item:not(:last-child) {
+    margin-right: 30px;
+}
+.clients-links {
+    display: block;
+    width: 170px;
+    height: 92px;
+    padding: 16px 32px;
+    border: 1px solid var(--links-color);
+    border-radius: 4px;
+    color: var(--links-color);
+}
 
 /* ?СТОРІНКА "ПОРТФОЛІО" */
 /* ^БЛОК ПОРТФОЛІО */
